@@ -1,6 +1,14 @@
-import pageload from "./pageload";
 import _ from 'lodash';
-import "./styles.css"
+import "./styles.css";
+import homePage from './homePage';
+
+const home = new homePage;
+
 
 alert("Restaurant!");
-pageload();
+
+home.createHeader();
+
+
+
+
