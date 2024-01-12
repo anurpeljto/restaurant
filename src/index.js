@@ -5,7 +5,7 @@ import homePage from './homePage';
 const home = new homePage;
 
 
-alert("Restaurant!");
+// alert("Restaurant!");
 
 home.createHeader();
 

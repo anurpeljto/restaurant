@@ -1,7 +1,12 @@
+import AboutUs from "./aboutus";
+
 export default class homePage{
     constructor(){
         this.container = document.querySelector('#content');
     };
+    clearPage(){
+        this.container.innerHTML='';
+    }
     createHeader(){
         const header = document.createElement('div');
         header.classList.add('header');
@@ -9,6 +14,12 @@ export default class homePage{
         const aboutUs = document.createElement('span');
         aboutUs.id='abt';
         aboutUs.textContent = 'About us';
+        aboutUs.classList.add('bar-item');
+        aboutUs.addEventListener('click', () => {
+            this.container.innerHTML = '';
+            let abt = new AboutUs;
+            abt.createAbout();
+        })
         header.appendChild(aboutUs);
 
         const logoButton = document.createElement('span');
@@ -16,7 +27,15 @@ export default class homePage{
         logoButton.textContent="Panucci's Pizza";
         header.appendChild(logoButton);
 
+        const contactUs = document.createElement('span');
+        contactUs.id='contact';
+        contactUs.classList.add('bar-item');
+        contactUs.textContent='Contact us';
+        header.appendChild(contactUs);
+
         this.container.appendChild(header);
+
+       
 
     }
 }

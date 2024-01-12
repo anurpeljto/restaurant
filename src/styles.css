@@ -4,7 +4,7 @@
     height: 100%;
     width: 100%;
     grid-template-columns: 1fr;
-    grid-template-rows: 3rem 0.5fr repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: 1fr;
     grid-auto-flow: row;
     justify-content: center;
     align-items: center;
@@ -13,7 +13,7 @@
 
 .header {
     display: grid;
-    height: 100%;
+    height: 5rem;
     width: 100%;
     grid-column: 1;
     grid-row: 1;
@@ -34,6 +34,10 @@
     color: white;
 }
 
+.bar-item:hover{
+    font-weight: bold;
+}
+
 #abt {
     grid-column: 2;
 }
@@ -43,9 +47,22 @@
 }
 
 img {
-    position: relative;
-    align-self: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    justify-self:center ;
+}
+
+#bod-ele {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-row: 2 / -1;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20rem 1fr;
+    gap: 3rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.description {
+
 }
