@@ -1,4 +1,5 @@
 import AboutUs from "./aboutus";
+import contact from "./contact";
 
 export default class homePage{
     constructor(){
@@ -31,6 +32,11 @@ export default class homePage{
         contactUs.id='contact';
         contactUs.classList.add('bar-item');
         contactUs.textContent='Contact us';
+        contactUs.addEventListener('click', () => {
+            this.container.innerHTML = '';
+            let cnct = new contact;
+            cnct.createContact();
+        });
         header.appendChild(contactUs);
 
         this.container.appendChild(header);
